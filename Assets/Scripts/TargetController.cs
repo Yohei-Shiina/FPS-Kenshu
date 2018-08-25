@@ -29,7 +29,7 @@ public class TargetController : MonoBehaviour {
 	}
 
 	public void CountScore(Vector3 hitP){  
-		int _score;
+		
 
 		if(_isFalling){
 			return;
@@ -37,7 +37,7 @@ public class TargetController : MonoBehaviour {
 
 		float distance;
 		distance = (TargetObj.transform.position - hitP).magnitude;
-		_score = (int)( 10 / distance);
+	
 		_totalScore +=(int)( 10 / distance);
 		Debug.Log ("トータルスコア" + _totalScore);
 	}
