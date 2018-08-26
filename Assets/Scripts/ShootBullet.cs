@@ -14,10 +14,10 @@ public class ShootBullet : Photon.MonoBehaviour
     private GameObject hitObj;
     private GameObject canvas;
     private GameObject gunScope;
-	private Vector3 bulletHitPoint;
-	private Vector3 screenCenter;
+    private Vector3 bulletHitPoint;
+    private Vector3 screenCenter;
     private Image snipe;
-	private ScreenUI screenUi;
+    private ScreenUI screenUi;
 
     [SerializeField] private Camera playerCamera;
     [SerializeField] private int _chargedBullet;
@@ -29,19 +29,21 @@ public class ShootBullet : Photon.MonoBehaviour
     private bool _isZooming;
 
     public int BulletBox
-	{
-		set {
-			this._bulletBox = value;
-		}
-	
+    {
+        set
+        {
+            this._bulletBox = value;
+        }
+
         get { return this._bulletBox; }
     }
 
     public int ChargedBullet
     {
-		set{
-			this._chargedBullet = value;
-		}
+        set
+        {
+            this._chargedBullet = value;
+        }
 
         get { return this._chargedBullet; }
     }
@@ -50,21 +52,21 @@ public class ShootBullet : Photon.MonoBehaviour
     void Start()
     {
         canvas = GameObject.Find("Canvas").gameObject;
-		screenUi = canvas.GetComponent<ScreenUI>();
+        screenUi = canvas.GetComponent<ScreenUI>();
         gunScope = canvas.transform.Find("snipe").gameObject;
         snipe = gunScope.GetComponent<Image>();
-		screenCenter = new Vector3 (Screen.width / 2, Screen.height / 2);
+        screenCenter = new Vector3(Screen.width / 2, Screen.height / 2);
 
         audioSource = GetComponent<AudioSource>();
         sparkle = (GameObject)Resources.Load("prefabs/Sparkle");
-        
+
 
         _chargedBullet = 30;
         _maxBullet = 30;
         _bulletBox = 150;
         _isShootable = true;
         _isRelaoding = false;
-		_isZooming = false;
+        _isZooming = false;
 
     }
 
@@ -76,7 +78,7 @@ public class ShootBullet : Photon.MonoBehaviour
             return;
         }
 
-		screenUi.DisplayText(BulletBox,ChargedBullet);
+        screenUi.DisplayText(BulletBox, ChargedBullet);
 
         if (Input.GetMouseButtonDown(1))
         {
@@ -126,7 +128,7 @@ public class ShootBullet : Photon.MonoBehaviour
             snipe.enabled = false;
         }
     }
-		
+
     public void FireBullet()
     {
         if (!_isShootable)
@@ -168,9 +170,9 @@ public class ShootBullet : Photon.MonoBehaviour
     [PunRPC]
     public void MinusPlayerHp()
     {
-       
-		PlayerHpController playerHpCon = GetComponent<PlayerHpController>();
-		playerHpCon.MinusHp();
+
+        PlayerHpController playerHpCon = GetComponent<PlayerHpController>();
+        playerHpCon.MinusHp();
     }
 
     IEnumerator ReloadBullet()

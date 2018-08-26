@@ -31,10 +31,12 @@ public class PlayerHpController : Photon.MonoBehaviour {
 
 		if (_hitPoint <= 0) {
 			
-			Debug.Log ("HP=0,破壊されます");
+		
 			_hitPoint = 5;
-			respawnCon.Die ();
 
+			respawnCon.Respawn = true;
+
+			PhotonNetwork.Destroy(gameObject);
 		}
 	}
 }

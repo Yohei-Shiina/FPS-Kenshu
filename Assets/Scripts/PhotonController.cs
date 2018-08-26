@@ -24,14 +24,14 @@ public class PhotonController : Photon.MonoBehaviour
 
     void OnJoinedRoom()
     {
-        Debug.Log("ルームに入室しました");     
+        Debug.Log("ルームに入室しました");
 
     }
-	   
+
 
     // Update is called once per frame
     void Update()
     {
-		
+
     }
 }

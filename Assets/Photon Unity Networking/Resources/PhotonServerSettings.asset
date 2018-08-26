@@ -45,4 +45,5 @@ MonoBehaviour:
   - MinusPlayerHp
   - KillPlayer
   - MinusHp
+  - Kill
   DisableAutoOpenWizard: 1
