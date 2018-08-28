@@ -3,25 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetController : MonoBehaviour {
-	    [SerializeField] int _lifeCount;
-	    [SerializeField] private GameObject HeadMaker;
 
-	    private Animator anim;
-	    private GameObject TargetObj;
-	    private int _totalScore; 
-	    private bool _isFalling;
+	[SerializeField] private GameObject HeadMaker;    
 
-	    public int TotalScore {
-		get{ return this._totalScore; }
+	private bool _isFalling;
+	private Animator anim;
+	private int _lifeCount;   
+	private int _totalScore; 	    
+
+	public int TotalScore {
+		set{ this._totalScore = value;
+		}
+		get{ return this._totalScore; 
+		}
 	}
-
 
 	    // Use this for initialization
 	    void Start () {
 		_isFalling = false;
 		_lifeCount = 5;
 		anim = GetComponent<Animator> ();
-		TargetObj = transform.Find("HeadMaker").gameObject;
+
 	}
 	    
 	    // Update is called once per frame
@@ -36,10 +38,10 @@ public class TargetController : MonoBehaviour {
 		}
 
 		float distance;
-		distance = (TargetObj.transform.position - hitP).magnitude;
+		distance = (HeadMaker.transform.position - hitP).magnitude;
 	
-		_totalScore +=(int)( 10 / distance);
-		Debug.Log ("トータルスコア" + _totalScore);
+		TotalScore +=(int)( 10 / distance);
+		Debug.Log ("トータルスコア" + TotalScore);
 	}
 
 

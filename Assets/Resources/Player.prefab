@@ -532,10 +532,7 @@ MonoBehaviour:
   fire: {fileID: 8300000, guid: 8602b7d5cd15c1943a50aa53f171c8cf, type: 3}
   reload: {fileID: 8300000, guid: 3c5c1d4d7b9307c458890a4beb12e4ae, type: 3}
   playerCamera: {fileID: 20909685886114676}
-  _chargedBullet: 0
-  _maxBullet: 0
-  _bulletBox: 0
-  _interval: 0
+  muzzle: {fileID: 1081850488783436}
 --- !u!114 &114256913247948736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -558,8 +555,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114873708046830528}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 1
+  instantiationId: 1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114728079999348842

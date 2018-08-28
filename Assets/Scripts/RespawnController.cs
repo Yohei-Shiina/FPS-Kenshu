@@ -6,8 +6,9 @@ public class RespawnController : MonoBehaviour
 {
 
     [SerializeField] private GameObject playerPrefs;
-    [SerializeField] private GameObject bornPlayer;
     [SerializeField] private ScreenUI screenUi;
+
+    private GameObject bornPlayer;
     private Vector3 _firstPos;
     private GameObject childOfPlayer;
     private Camera camera;
@@ -52,11 +53,11 @@ public class RespawnController : MonoBehaviour
     }
 
 
-    public void Spawn()
+    void Spawn()
     {
 
         bornPlayer = PhotonNetwork.Instantiate(playerPrefs.name, _firstPos, Quaternion.identity, 0);
-        screenUi._shootBulCheck = true;
+        screenUi.ShootBulCheck = true;
 
         childOfPlayer = bornPlayer.transform.Find("FirstPersonCharacter").gameObject;
         camera = childOfPlayer.GetComponent<Camera>();

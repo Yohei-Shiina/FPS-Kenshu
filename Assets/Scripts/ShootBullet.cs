@@ -7,7 +7,13 @@ public class ShootBullet : Photon.MonoBehaviour
 
     [SerializeField] private AudioClip fire;
     [SerializeField] private AudioClip reload;
-
+    [SerializeField] private Camera playerCamera;
+	[SerializeField] private GameObject muzzle;
+   
+	private int _chargedBullet;
+    private int _maxBullet;
+    private int _bulletBox;
+	private float _interval;
     private AudioSource audioSource;
     private GameObject sparkle;
     private GameObject generatedSparkle;
@@ -18,12 +24,6 @@ public class ShootBullet : Photon.MonoBehaviour
     private Vector3 screenCenter;
     private Image snipe;
     private ScreenUI screenUi;
-
-    [SerializeField] private Camera playerCamera;
-    [SerializeField] private int _chargedBullet;
-    [SerializeField] private int _maxBullet;
-    [SerializeField] private int _bulletBox;
-    [SerializeField] private float _interval;
     private bool _isShootable;
     private bool _isRelaoding;
     private bool _isZooming;
@@ -207,7 +207,7 @@ public class ShootBullet : Photon.MonoBehaviour
     }
     void MakeSparkle()
     {
-        generatedSparkle = Instantiate(sparkle, transform.position, Quaternion.FromToRotation(transform.position, bulletHitPoint));
+		generatedSparkle = Instantiate(sparkle, muzzle.transform.position, Quaternion.FromToRotation(transform.position, bulletHitPoint));
         Destroy(generatedSparkle, 0.1f);
     }
 }
