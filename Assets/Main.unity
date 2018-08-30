@@ -142,7 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefs: {fileID: 1890175901888014, guid: 6cc6e681c2f1671459e39624d6345acd,
     type: 2}
-  bornPlayer: {fileID: 0}
   screenUi: {fileID: 1025822641}
 --- !u!4 &1859206
 Transform:
@@ -738,7 +737,6 @@ MonoBehaviour:
   - {fileID: 1908660684}
   - {fileID: 1012614267}
   - {fileID: 821538375}
-  shootBul: {fileID: 0}
   targetCon: {fileID: 1712373992}
 --- !u!114 &1025822642
 MonoBehaviour:

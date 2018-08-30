@@ -31,7 +31,7 @@ public class RespawnController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Respawn = false;
+		_respawn = false;
         _firstPos = new Vector3(0, 1, 0);
         Invoke("Spawn", 3);
 
@@ -42,13 +42,13 @@ public class RespawnController : MonoBehaviour
     {
 
 
-        if (!Respawn)
+		if (!_respawn)
         {
             return;
         }
 
         Invoke("Spawn", 3);
-        Respawn = false;
+		_respawn = false;
 
     }
 

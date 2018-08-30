@@ -40,8 +40,8 @@ public class TargetController : MonoBehaviour {
 		float distance;
 		distance = (HeadMaker.transform.position - hitP).magnitude;
 	
-		TotalScore +=(int)( 10 / distance);
-		Debug.Log ("トータルスコア" + TotalScore);
+		_totalScore +=(int)( 10 / distance);
+		Debug.Log ("トータルスコア" + _totalScore);
 	}
 
 

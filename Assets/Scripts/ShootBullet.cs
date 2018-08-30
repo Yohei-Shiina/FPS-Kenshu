@@ -78,7 +78,7 @@ public class ShootBullet : Photon.MonoBehaviour
             return;
         }
 
-        screenUi.DisplayText(BulletBox, ChargedBullet);
+		screenUi.DisplayText(_bulletBox, _chargedBullet);
 
         if (Input.GetMouseButtonDown(1))
         {

@@ -33,10 +33,9 @@ public class ScreenUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ShootBulCheck == true)
+		if (_shootBulCheck == true)
         {
-            //これだと最初に生成されたCloneの情報をとってしまう。
-            //ShootBulletでScreenUIを見つけて
+			_shootBulCheck = false;
             shootBul = GameObject.Find("Player(Clone)").GetComponent<ShootBullet>();
 
             _remainingTime -= 1 * Time.deltaTime;
