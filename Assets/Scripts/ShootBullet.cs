@@ -30,21 +30,12 @@ public class ShootBullet : Photon.MonoBehaviour
 
     public int BulletBox
     {
-        set
-        {
-            this._bulletBox = value;
-        }
-
         get { return this._bulletBox; }
     }
 
     public int ChargedBullet
     {
-        set
-        {
-            this._chargedBullet = value;
-        }
-
+ 
         get { return this._chargedBullet; }
     }
 

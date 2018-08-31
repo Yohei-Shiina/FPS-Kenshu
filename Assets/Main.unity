@@ -1188,6 +1188,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1680883469}
+  - component: {fileID: 1680883470}
   m_Layer: 0
   m_Name: Stage
   m_TagString: Untagged
@@ -1212,6 +1213,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680883470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1680883468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 587cba66fdb851947987b002fb01c2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1712373991 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: 6e4b42461da5a4123b8101091224d9ab, type: 3}

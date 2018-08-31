@@ -12,8 +12,6 @@ public class TargetController : MonoBehaviour {
 	private int _totalScore; 	    
 
 	public int TotalScore {
-		set{ this._totalScore = value;
-		}
 		get{ return this._totalScore; 
 		}
 	}
