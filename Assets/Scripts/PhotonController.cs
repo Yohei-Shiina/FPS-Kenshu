@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PhotonController : Photon.MonoBehaviour
 {
-
+	bool judgeRoom;
+	bool judgeSearch;
 	private string _roomName;
 	private RoomOptions roomOptions; 
 	private RoomInfo[] roomInfo;
@@ -34,6 +35,8 @@ public class PhotonController : Photon.MonoBehaviour
 		roomOptions.IsOpen = true;
 		roomOptions.IsVisible = true;
 		_isConnected = false;
+		judgeRoom = false;
+		judgeSearch = false;
 
     }
 
@@ -94,8 +97,7 @@ public class PhotonController : Photon.MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
-		bool judgeRoom;
-		bool judgeSearch;
+		
 
 		if (_isConnected) {
 			stateText.text = "Room";
