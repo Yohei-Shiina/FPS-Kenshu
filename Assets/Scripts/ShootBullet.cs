@@ -47,7 +47,6 @@ public class ShootBullet : Photon.MonoBehaviour
         gunScope = canvas.transform.Find("snipe").gameObject;
         snipe = gunScope.GetComponent<Image>();
         screenCenter = new Vector3(Screen.width / 2, Screen.height / 2);
-
         audioSource = GetComponent<AudioSource>();
         sparkle = (GameObject)Resources.Load("prefabs/Sparkle");
 
